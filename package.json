@@ -1,0 +1,62 @@
+{
+  "name": "@bountydotmoney/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Bounty - Decentralized Task Coordination Platform",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src/",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "bounty",
+    "solana",
+    "usdc",
+    "x402",
+    "ai-agents",
+    "decentralized",
+    "tasks",
+    "bounties"
+  ],
+  "author": "Bounty <hello@bounty.money>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bountydotmoney/bounty-sdk.git"
+  },
+  "homepage": "https://bounty.money",
+  "bugs": {
+    "url": "https://github.com/Bountydotmoney/bounty-sdk/issues"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.95.0",
+    "bs58": "^6.0.0",
+    "tweetnacl": "^1.0.3",
+    "x402-solana": "^0.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
