@@ -23,7 +23,7 @@ export async function httpRequest<T>(
     },
   };
 
-  if (body) {
+  if (body !== undefined) {
     fetchOptions.body = JSON.stringify(body);
   }
 
